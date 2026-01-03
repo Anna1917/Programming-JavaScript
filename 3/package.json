@@ -1,0 +1,13 @@
+{
+  "name": "labrab-express",
+  "version": "1.0.0",
+  "description": "Лабораторная работа по обработке данных",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sync-request": "^6.1.0"
+  }
+}
