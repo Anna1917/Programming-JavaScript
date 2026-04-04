@@ -1,0 +1,20 @@
+[
+    {
+        "surname": "Зворыгина",
+        "name": "Анна",
+        "cardNumber": "1742",
+        "books": []
+    },
+    {
+        "surname": "Иванов",
+        "name": "Петр",
+        "cardNumber": "U002",
+        "books": []
+    },
+    {
+        "surname": "Перова",
+        "name": "Светлана",
+        "cardNumber": "ADMIN01",
+        "books": []
+    }
+]
