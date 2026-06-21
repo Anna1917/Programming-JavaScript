@@ -1,19 +1,16 @@
 const fs = require('fs');
-const data = JSON.parse(fs.readFileSync('./5/json/clients.json', 'utf8'));
-const clients = data.clients;
+const clients = JSON.parse(fs.readFileSync('./5/json/clients.json', 'utf8')).clients;
 
-let result = clients.filter(client => client.address.city === 'Кунгур');
-
-result.sort((a, b) => {
-    if (a.gender !== b.gender) {
-        if (a.gender === 'female') return -1;
-        else return 1;
-    }
-
-    if (a.age !== b.age) {
-        return b.age - a.age; 
-    }
-    return a.name.localeCompare(b.name, 'ru');
-});
-
-console.log(JSON.stringify(result, null, 4));
+console.log(JSON.stringify(
+  clients
+    .filter(client => client.address.city === 'Кунгур')
+    .sort((a, b) => 
+      a.gender !== b.gender 
+        ? (a.gender === 'female' ? -1 : 1)
+        : (a.age !== b.age 
+          ? b.age - a.age 
+          : a.name.localeCompare(b.name, 'ru'))
+    ),
+  null, 
+  4
+));
